@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>益禾堂</title>
+    <meta name="description" content="Sidebar Transitions: Transition effects for off-canvas views" />
+    <meta name="keywords" content="transition, off-canvas, navigation, effect, 3d, css3, smooth" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <style>
+        .top-banner {
+            z-index: 999;
+            text-align: right;
+            height: 30px !important;
+            line-height: 30px !important;
+        }
+
+        .top-banner a {
+            color: green !important;
+            text-shadow: none;
+        }
+
+        .column {
+            margin: 60px auto;
+            float: none;
+            text-align: center;
+            width: 75%;
+            min-height: 100px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <script src="js/modernizr.custom.js"></script>
+    <!-- <link rel="stylesheet" href="http://dreamsky.github.io/main/blog/common/init.css"> -->
+    <!-- <script src="http://dreamsky.github.io/main/blog/common/jquery.min.js"></script> -->
+    <!-- <script src="http://dreamsky.github.io/main/blog/common/init.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+
+
+    <!-- axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://img.hcharts.cn/highcharts/highcharts.js"></script>
+    <script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
+</head>
+
+<body>
+
+
+    <div id="st-container" class="st-container">
+        <div class="container">
+
+            <nav class="st-menu st-effect-12" id="menu-12">
+                <h2 class="icon icon-stack">益禾堂</h2>
+                <ul>
+                    <li>
+                        <a class="icon icon-data" href="home.html">主页</a>
+                    </li>
+                    <li>
+                        <a class="icon icon-location" href="login.html">管理平台</a>
+                    </li>
+                    <li>
+                        <a class="icon icon-study" href="order.html">下单平台</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+
+
+
+
+        <div class="st-pusher">
+
+
+            <div class="st-content">
+                <div class="st-content-inner">
+
+
+                    <div class="jumbotron jumbotron-fluid bg-success p-5">
+                        <div class="container">
+                            <!-- <h1  class="display-3 font-weight-bold text-white">益禾堂</h1> -->
+                            <div class="main clearfix">
+                                <div id="st-trigger-effects" class="column">
+                                    <button data-effect="st-effect-12" type="button" class="btn btn-success">
+                                        <h1 class="display-3 font-weight-bold text-white">益禾堂</h1>
+
+                                    </button>
+
+                                </div>
+                                <!-- /st-content-inner -->
+                            </div>
+                            <!-- /st-content -->
+                        </div>
+                        <!-- /st-pusher -->
+                        <p class="lead text-right text-white mr-5">火遍大街小巷的奶茶</p>
+                    </div>
+                </div>
+                <div id="container" style="min-width:400px;height:400px"></div>
+                <div id='app' class="container-fluid">
+
+                    <div id="accordion">
+
+
+
+
+
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button @click="check()" class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo"
+                                        aria-expanded="false" aria-controls="collapseOne">
+                                        查看所有订单
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="col-lg-12 col-sm-12">
+
+                                        <div class="jumbotron">
+                                            <table class="table table-hover">
+                                                <thead class="thead-dark ">
+                                                    <tr>
+                                                        <!-- <th scope="col" class="text-center">流水号</th> -->
+                                                        <th scope="col" class="text-center">商品名称</th>
+                                                        <th scope="col" class="text-center">杯型</th>
+                                                        <th scope="col" class="text-center">配料</th>
+                                                        <th scope="col" class="text-center">价格</th>
+                                                        <th scope="col" class="text-center">日期</th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody v-for="o in os" class="text-center">
+                                                    <tr>
+                                                        <!-- <th scope="row">{{o.id}}</th> -->
+                                                        <td scope="row">{{o.pname}}</td>
+                                                        <td>{{o.size}}</td>
+                                                        <td>{{o.opt}}</td>
+                                                        <td>{{o.price}}</td>
+                                                        <td>{{o.data1}}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button @click="select1()" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                        aria-expanded="false" aria-controls="collapseOne">
+                                        查看特定产品订单
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="row">
+
+
+                                        <div class="col-lg-12 col-sm-12">
+
+                                            <!-- <div class="form-group">
+                                                <label for=""></label>
+                                                <select class="form-control" v-model="Sname">
+                                                    <option v-for="p in ps">{{p.name}}</option>
+                                                    
+                                                </select>
+                                            </div> -->
+
+                                            <button @click="select11(p.name)" v-for="p in ps" type="button" class="btn btn-primary btn-outline mx-5 my-2">{{p.name}}</button>
+                                        </div>
+
+                                        <!-- <div class=   "col-lg-4 col-sm-4"> -->
+                                        <!-- <button @click="select11()" type="button" class="btn btn-danger-outline mt-4">查找</button> -->
+                                        <!-- </div> -->
+                                    </div>
+
+                                    <div class="container">
+
+
+                                        <div class="row">
+                                            <div class="col-lg-12 col-sm-12">
+                                                <div v-if="progress == 10" class="jumbotron">
+                                                    <table class="table table-hover">
+                                                        <thead class="thead-dark ">
+                                                            <tr>
+                                                                <!-- <th scope="col" class="text-center">流水号</th> -->
+                                                                <th scope="col" class="text-center">商品名称</th>
+                                                                <th scope="col" class="text-center">杯型</th>
+                                                                <th scope="col" class="text-center">配料</th>
+                                                                <th scope="col" class="text-center">价格</th>
+                                                                <th scope="col" class="text-center">日期</th>
+
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody v-for="o in os1" class="text-center">
+                                                            <tr>
+                                                                <!-- <th scope="row">{{o.id}}</th> -->
+                                                                <td scope="row">{{o.pname}}</td>
+                                                                <td>{{o.size}}</td>
+                                                                <td>{{o.opt}}</td>
+                                                                <td>{{o.price}}</td>
+                                                                <td>{{o.data1}}</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                                <button @click="select2()" class="btn btn-link" data-toggle="collapse" data-target="#collapseThree"
+                                    aria-expanded="false" aria-controls="collapseOne">
+                                    查看特定时间订单
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+
+                                <div class="row">
+
+
+                                    <div class="col-lg-8 col-sm-8">
+
+                                        <div class="form-group">
+                                            <label for=""></label>
+                                            <select class="form-control" v-model="St">
+                                                <option v-for="t in ts"> {{t}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-sm-4">
+                                        <button @click="select22(t)" type="button" class="btn btn-danger-outline mt-4">查找</button>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-12 col-sm-12">
+
+                                    <div v-if="progress == 9" class="jumbotron">
+
+                                        <table class="table table-hover">
+                                            <thead class="thead-dark ">
+                                                <tr>
+                                                    <!-- <th scope="col" class="text-center">流水号</th> -->
+                                                    <th scope="col" class="text-center">商品名称</th>
+                                                    <th scope="col" class="text-center">杯型</th>
+                                                    <th scope="col" class="text-center">配料</th>
+                                                    <th scope="col" class="text-center">价格</th>
+                                                    <th scope="col" class="text-center">日期</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody v-for="o in os2" class="text-center">
+                                                <tr>
+                                                    <!-- <th scope="row">{{o.id}}</th> -->
+                                                    <td scope="row">{{o.pname}}</td>
+                                                    <td>{{o.size}}</td>
+                                                    <td>{{o.opt}}</td>
+                                                    <td>{{o.price}}</td>
+                                                    <td>{{o.date}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- Button trigger modal -->
+
+
+            </div>
+            <!-- Modal -->
+        </div>
+
+
+
+
+
+    </div>
+
+
+    <script>
+        let name = '11';
+        let osss = [];
+
+
+
+
+
+        chart = Highcharts.chart('container', {
+                chart: {
+                    spacing: [40, 0, 40, 0]
+                },
+                title: {
+                    floating: true,
+                    text: '业绩表'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        },
+                        point: {
+                            events: {
+                                mouseOver: function (e) { // 鼠标滑过时动态更新标题
+                                    // 标题更新函数，API 地址：https://api.hcharts.cn/highcharts#Chart.setTitle
+                                    chart.setTitle({
+                                        text: e.target.name + '\t' + e.target.y + ' %'
+                                    });
+
+                                }
+                                //, 
+                                // click: function(e) { // 同样的可以在点击事件里处理
+                                //     chart.setTitle({
+                                //         text: e.point.name+ '\t'+ e.point.y + ' %'
+                                //     });
+                                // }
+                            }
+                        },
+                    }
+                },
+                series: [{
+
+
+                    type: 'pie',
+                    oss: [],
+                    oss1:'',
+                    o: [],
+                    innerSize: '80%',
+                    name: '销售份额',
+                    data: [
+                        // ['芒果牛奶', 25.2],
+                        {
+                            name: '芒果牛奶',
+                            y: 32.4,
+                            sliced: true,
+                            selected: true,
+                            
+                        },
+                        ['烤奶', 18.9],
+                        ['一杯花果山', 12.0],
+                        ['西瓜牛奶', 11.0],
+                        ['柠檬爱玉冻', 9.0],
+                        ['其他', 16.7],
+                    ]
+                }]
+            },
+            function (c) { // 图表初始化完毕后的会掉函数
+                // 环形图圆心
+                var centerY = c.series[0].center[1],
+                    titleHeight = parseInt(c.title.styles.fontSize);
+
+          
+
+
+                // 动态设置标题位置
+                c.setTitle({
+                    y: centerY + titleHeight / 2
+                });
+
+                axios.get('/api/v1/tea/order/statistics/chart')
+                    .then(function (response) {
+
+                        console.log(response.data);
+                        this.oss = response.data;
+                        oss1 = this.oss[0].pname;
+                        console.log(oss1);
+                        
+
+                        // this.data = [[oss[0].pname,oss[0].ratio]];
+
+                        // osss = response.data;
+
+
+                    })
+                    .catch(() => {
+                        console.log('出错了')
+                    });
+
+            },
+
+
+        );
+    </script>
+
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+
+                os: [],
+                os1: [],
+                os2: [],
+                o: [],
+                ts: [],
+                t: Date,
+                St: Date,
+                // progress: 0,
+
+                ps: [],
+                progress: 0,
+                p: [],
+                Sname: '西瓜汁',
+
+
+
+            },
+            methods: {
+
+
+
+                select2: function () {
+
+                    axios.get('/api/v1/tea/order/Time')
+                        .then((response) => {
+                            console.log(response.data);
+
+                            this.ts = response.data;
+
+
+                        })
+                        .catch(() => {
+                            console.log('出错了')
+                        });
+
+                },
+
+                select22: function () {
+                    this.progress = 9;
+                    console.log(this.St);
+                    axios.post('/api/v1/tea/order/ListT', {
+
+                            t: this.St,
+
+                        })
+                        .then((response) => {
+                            console.log(response.data);
+
+                        })
+                        .catch((error) => {
+                            console.log('error');
+
+                        })
+
+
+                    axios.get('/api/v1/tea/order/statistics/time')
+                        .then((response) => {
+                            console.log(response.data);
+                            this.os2 = response.data;
+                            console.log(this.os2);
+
+                        })
+                        .catch(() => {
+                            console.log('出错了')
+                        });
+
+                },
+
+                select11: function (SSname) {
+                    this.Sname = SSname;
+                    this.progress = 10;
+                    axios.post('/api/v1/tea/order/list', {
+                            name: this.Sname,
+
+                        })
+                        .then((response) => {
+                            console.log(response.data);
+
+                        })
+                        .catch((error) => {
+                            console.log('error');
+
+                        })
+                    console.log(this.Sname);
+
+                    axios.get('/api/v1/tea/order/statistics/name')
+                        .then((response) => {
+                            console.log(response.data);
+                            this.os1 = response.data;
+                            console.log(this.os1);
+
+                        })
+                        .catch(() => {
+                            console.log('出错了')
+                        });
+
+                },
+                check: function () {
+                    // this.progress = 10;
+
+                    axios.get('/api/v1/tea/order/statistics')
+                        .then((response) => {
+                            console.log(response.data);
+                            this.os = response.data;
+                            console.log(this.Sname);
+                        })
+                        .catch(() => {
+                            console.log('出错了')
+                        });
+                },
+                select1: function () {
+                    // this.progress = 10;
+
+
+                    axios.get('/api/v1/tea/product')
+                        .then((response) => {
+                            console.log(response.data);
+
+                            this.ps = response.data;
+
+
+                        })
+                        .catch(() => {
+                            console.log('出错了')
+                        });
+                },
+            },
+
+
+
+
+        });
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/classie.js"></script>
+    <script src="js/sidebarEffects.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="no-js">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>益禾堂</title>
+	<meta name="description" content="Sidebar Transitions: Transition effects for off-canvas views" />
+	<meta name="keywords" content="transition, off-canvas, navigation, effect, 3d, css3, smooth" />
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/icons.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<style>
+		.top-banner {
+			z-index: 999;
+			text-align: right;
+			height: 30px !important;
+			line-height: 30px !important;
+		}
+
+		.top-banner a {
+			color: green !important;
+			text-shadow: none;
+		}
+
+		.column {
+			margin: 60px auto;
+			float: none;
+			text-align: center;
+			width: 75%;
+			min-height: 100px;
+		}
+	</style>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+	    crossorigin="anonymous">
+	<script src="js/modernizr.custom.js"></script>
+	<!-- <script src="<%=contextpath%>/static/jquery/jquery.min.js"></script> -->
+	<!-- <script src="<%=contextpath%>/static/jquery/jquery-1.10.2.js" type="text/javascript"></script> -->
+	<!-- <link rel="stylesheet" href="http://dreamsky.github.io/main/blog/common/init.css">
+	<script src="http://dreamsky.github.io/main/blog/common/jquery.min.js"></script>
+	<script src="http://dreamsky.github.io/main/blog/common/init.js"></script> -->
+</head>
+
+<body>
+	<div id="st-container" class="st-container">
+		<div class="container">
+			<nav class="st-menu st-effect-12" id="menu-12">
+				<h2 class="icon icon-stack">益禾堂</h2>
+				<ul>
+					<li>
+						<a class="icon icon-data" href="login.html">后台管理</a>
+					</li>
+					<li>
+						<a class="icon icon-location" href="order.html">下单平台</a>
+					</li>
+					<li>
+						<a class="icon icon-study" href="statistics.html">查看业绩</a>
+					</li>
+
+				</ul>
+			</nav>
+		</div>
+
+
+		<!-- content push wrapper -->
+		<div class="st-pusher">
+
+
+			<div class="st-content">
+				<div class="st-content-inner">
+
+
+					<div class="jumbotron jumbotron-fluid bg-success p-5">
+						<div class="container">
+							<!-- <h1  class="display-3 font-weight-bold text-white">益禾堂</h1> -->
+							<div class="main clearfix">
+								<div id="st-trigger-effects" class="column">
+									<button data-effect="st-effect-12" type="button" class="btn btn-success">
+										<h1 class="display-3 font-weight-bold text-white">益禾堂</h1>
+									</button>
+								</div>
+								<!-- /st-content-inner -->
+							</div>
+							<!-- /st-content -->
+						</div>
+						<!-- /st-pusher -->
+						<p class="lead text-right text-white mr-5">火遍大街小巷的奶茶</p>
+					</div>
+				</div>
+
+				<div class="container">
+					<div style="width:1000px; margin:0 auto; position:relative;padding-bottom: 100px">
+						<div>
+							<img src="http://dhy.ygfl24.cn/2yp/pc/yht/01.jpg">
+						</div>
+						<div>
+							<img src="http://dhy.ygfl24.cn/2yp/pc/yht/02.jpg" class="img-responsive">
+						</div>
+						<div>
+							<img src="http://dhy.ygfl24.cn/2yp/pc/yht/03.jpg">
+						</div>
+						<div>
+							<img src="http://dhy.ygfl24.cn/2yp/pc/yht/04.jpg">
+						</div>
+						<div>
+							<img src="http://dhy.ygfl24.cn/2yp/pc/yht/05.jpg">
+						</div>
+						<div>
+							<img src="http://dhy.ygfl24.cn/2yp/pc/yht/06.jpg">
+						</div>
+						<div>
+							<img src="http://dhy.ygfl24.cn/2yp/pc/yht/07.jpg">
+						</div>
+						<div>
+							<img src="http://dhy.ygfl24.cn/2yp/pc/yht/08.jpg">
+						</div>
+						<div>
+							<img src="http://dhy.ygfl24.cn/2yp/pc/yht/09.jpg">
+						</div>
+						<div>
+							<img src="http://dhy.ygfl24.cn/2yp/pc/yht/10.jpg">
+						</div>
+						<div>
+							<img src="http://dhy.ygfl24.cn/2yp/pc/yht/11.jpg">
+						</div>
+						<div>
+							<img src="http://dhy.ygfl24.cn/2yp/pc/yht/12.jpg">
+						</div>
+					</div>
+				</div>
+
+
+				<!-- <div class="jumbotron jumbotron-fluid mb-0 my-0 py-3 fixed-bottom bg-success"> -->
+
+				<!-- <div class="container my-0">
+								<p class="lead text-right text-white mr-5">加盟电话 xxxx-xxxxxxxx</p>
+							
+						</div> -->
+
+
+				<!-- <div class="alert bg-success alert-dismissible fade show fixed-bottom mb-0" role="alert">
+								<strong>加盟电话</strong> xxxx-xxxxxxxx.
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								  <span aria-hidden="true">&times;</span>
+								</button>
+							  </div> -->
+				<!-- </div> -->
+
+				<div class="alert bg-success alert-dismissible fade show fixed-bottom mb-0" role="alert">
+					<!-- <strong>加盟电话</strong> xxxx-xxxxxxxx. -->
+					<div class="row">
+						<div class="col-sm-6 col-lg-3">
+
+
+							<a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=baidu&wd=%E6%80%8E%E4%B9%88%E5%8A%A0%E7%9B%9F%E7%9B%8A%E7%A6%BE%E5%A0%82&oq=8.%2520%25E7%25AE%2580%25E8%25BF%25B0%25E5%25AD%2597%25E8%258A%2582%25E6%25B5%2581%25E5%2592%258C%25E5%25AD%2597%25E7%25AC%25A6%25E6%25B5%2581%25E7%259A%2584%25E4%25BD%25BF%25E7%2594%25A8%25E5%259C%25BA%25E6%2599%25AF&rsv_pq=e9827b5a0000f937&rsv_t=f5346O04oFetdV%2FfwVCTYVfdCXBXYWwenGTaswdMePkWjy%2Fof0eluK4dMq0&rqlang=cn&rsv_enter=0&rsv_sug3=33&rsv_sug1=33&rsv_sug7=101&inputT=10220&rsv_sug4=10221">
+								<button type="button" class="btn btn-light">怎么加盟益禾堂</button>
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg-3">
+							<a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=baidu&wd=%E5%8A%A0%E7%9B%9F%E7%9B%8A%E7%A6%BE%E5%A0%82%E9%9C%80%E8%A6%81%E5%A4%9A%E5%B0%91%E9%92%B1&oq=%25E6%2580%258E%25E4%25B9%2588%25E5%258A%25A0%25E7%259B%259F%25E7%259B%258A%25E7%25A6%25BE%25E5%25A0%2582&rsv_pq=cf47c7fd000169ff&rsv_t=0efdAIFQ60RsF0mVfm3BQS4JDDFqVRuNcflcxLXp7BNKawtmoLSdMpldCxE&rqlang=cn&rsv_enter=0&inputT=10220&rsv_n=2&rsv_sug3=34&bs=%E6%80%8E%E4%B9%88%E5%8A%A0%E7%9B%9F%E7%9B%8A%E7%A6%BE%E5%A0%82">
+								<button type="button" class="btn btn-info">加盟益禾堂需要多少钱</button>
+							</a>
+
+						</div>
+						<div class="col-sm-6 col-lg-3">
+							<a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=baidu&wd=%E7%9B%8A%E7%A6%BE%E5%A0%82%E5%88%A9%E6%B6%A6%E9%AB%98%E5%90%97&oq=%25E5%258A%25A0%25E7%259B%259F%25E7%259B%258A%25E7%25A6%25BE%25E5%25A0%2582%25E9%259C%2580%25E8%25A6%2581%25E5%25A4%259A%25E5%25B0%2591%25E9%2592%25B1&rsv_pq=c668fc1d000162f3&rsv_t=79e5YbEkD7pZ0puxLzGJY1kXJ%2F9dcQYF0c8dyLYE%2F%2Br1wvxsc57rI15CKUo&rqlang=cn&rsv_enter=0&inputT=1100&rsv_n=2&rsv_sug3=35&bs=%E5%8A%A0%E7%9B%9F%E7%9B%8A%E7%A6%BE%E5%A0%82%E9%9C%80%E8%A6%81%E5%A4%9A%E5%B0%91%E9%92%B1">
+								<button type="button" class="btn btn-light">益禾堂利润高吗</button>
+							</a>
+
+						</div>
+						<div class="col-sm-6 col-lg-3">
+							<a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=baidu&wd=%E7%9B%8A%E7%A6%BE%E5%A0%82%E5%89%8D%E6%99%AF%E6%80%8E%E4%B9%88%E6%A0%B7&oq=%25E7%259B%258A%25E7%25A6%25BE%25E5%25A0%2582%25E5%2588%25A9%25E6%25B6%25A6%25E9%25AB%2598%25E5%2590%2597&rsv_pq=bee8b67900019f6a&rsv_t=24a8DD0sfzhMJ54YvyE8yA436VCSf2wHVv30swyc%2FylwzgvzuliM%2BD%2BifX8&rqlang=cn&rsv_enter=0&inputT=843&rsv_n=2&rsv_sug3=36&bs=%E7%9B%8A%E7%A6%BE%E5%A0%82%E5%88%A9%E6%B6%A6%E9%AB%98%E5%90%97">
+								<button type="button" class="btn btn-info">益禾堂前景怎么样</button>
+							</a>
+
+						</div>
+					</div>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /main -->
+	<!-- <div class="footer-banner" style="width:728px; margin:160px auto 0"></div> -->
+	<!-- </div> -->
+	<!-- /st-container -->
+	<script src="js/classie.js"></script>
+	<script src="js/sidebarEffects.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	    crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	    crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+	    crossorigin="anonymous"></script>
+</body>
+
+</html>

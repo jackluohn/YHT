@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>益禾堂</title>
+    <meta name="description" content="Sidebar Transitions: Transition effects for off-canvas views" />
+    <meta name="keywords" content="transition, off-canvas, navigation, effect, 3d, css3, smooth" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/icons.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+
+
+    <link rel="stylesheet" type="text/css" href="css/slicebox.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <link rel="stylesheet" href="http://dreamsky.github.io/main/blog/common/init.css">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+
+
+    <style>
+        .top-banner {
+					z-index: 999;
+					text-align: right;
+					height: 30px !important;
+					line-height: 30px !important;
+				}
+				.top-banner a {
+					color:green !important;
+					text-shadow: none;
+				}
+				.column {
+					margin: 60px auto;
+					float: none;
+					text-align: center;
+					width: 75%;
+					min-height: 100px;
+				}
+				h1 {
+					margin-top: 100px;
+					font-family: 'Microsoft Yahei';
+					font-size: 36px;
+					color: #019157;
+				}
+				</style>
+    <script src="js/modernizr.custom.js"></script>
+    <!-- <link rel="stylesheet" href="http://dreamsky.github.io/main/blog/common/init.css"> -->
+    <!-- <script src="http://dreamsky.github.io/main/blog/common/jquery.min.js"></script> -->
+    <!-- <script src="http://dreamsky.github.io/main/blog/common/init.js"></script> -->
+    <script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="st-container" class="st-container">
+        <div class="container">
+
+            <nav class="st-menu st-effect-12" id="menu-12">
+                <h2 class="icon icon-stack">益禾堂</h2>
+                <ul>
+                    <li>
+                        <a class="icon icon-data" href="home.html">主页</a>
+                    </li>
+                    <li>
+                        <a class="icon icon-location" href="order.html">下单平台</a>
+                    </li>
+                    <li>
+                        <a class="icon icon-study" href="statistics.html">查看业绩</a>
+                    </li>
+                    <li>
+                        <a class="icon icon-study" href="register.html">增加管理员</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+
+
+
+
+
+        <!-- content push wrapper -->
+        <div class="st-pusher">
+
+
+            <div class="st-content">
+                <div class="st-content-inner">
+
+
+                    <div class="jumbotron jumbotron-fluid bg-success p-5">
+                        <div class="container">
+                            <!-- <h1  class="display-3 font-weight-bold text-white">益禾堂</h1> -->
+                            <div class="main clearfix">
+                                <div id="st-trigger-effects" class="column">
+                                    <button data-effect="st-effect-12" type="button" class="btn btn-success">
+                                        <h1 class="display-3 font-weight-bold text-white">益禾堂</h1>
+
+                                    </button>
+
+                                </div>
+                                <!-- /st-content-inner -->
+                            </div>
+                            <!-- /st-content -->
+                        </div>
+                        <!-- /st-pusher -->
+                        <p class="lead text-right text-white mr-5">火遍大街小巷的奶茶</p>
+                    </div>
+                </div>
+                <div class="container">
+                    <h1>产品示例</h1>
+
+
+                    <div class="wrapper">
+
+                        <ul id="sb-slider" class="sb-slider">
+                            <li>
+                                <img src="http://gxp.pcwuxianyin.cn/nmdrs/yht/py-b01-011-1806/ima/aa/aa_01.jpg" alt="">
+
+                                <div class="sb-description">
+                                    <h3>奶盖</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <!-- <a  target="_blank"><img src="images/2.jpg" alt="image2"/></a> -->
+                                <img src="http://gxp.pcwuxianyin.cn/nmdrs/yht/py-b01-011-1806/ima/aa/aa_04.jpg" alt="">
+                                <div class="sb-description">
+                                    <h3>柠檬爱玉冻</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <!-- <a  target="_blank"><img src="images/2.jpg" alt="image2"/></a> -->
+                                <img src="http://gxp.pcwuxianyin.cn/nmdrs/yht/py-b01-011-1806/ima/aa/aa_05.jpg" alt="">
+                                <div class="sb-description">
+                                    <h3>奶绿</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <!-- <a  target="_blank"><img src="images/2.jpg" alt="image2"/></a> -->
+                                <img src="http://gxp.pcwuxianyin.cn/nmdrs/yht/py-b01-011-1806/ima/aa/aa_06.jpg" alt="">
+                                <div class="sb-description">
+                                    <h3>芒果牛奶</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <!-- <a  target="_blank"><img src="images/2.jpg" alt="image2"/></a> -->
+                                <img src="http://gxp.pcwuxianyin.cn/nmdrs/yht/py-b01-011-1806/ima/aa/aa_07.jpg" alt="">
+                                <div class="sb-description">
+                                    <h3>泷珠奶茶</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <!-- <a  target="_blank"><img src="images/2.jpg" alt="image2"/></a> -->
+                                <img src="http://gxp.pcwuxianyin.cn/nmdrs/yht/py-b01-011-1806/ima/aa/aa_08.jpg" alt="">
+                                <div class="sb-description">
+                                    <h3>一杯花果山</h3>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                        <div id="shadow" class="shadow"></div>
+
+                        <div id="nav-arrows" class="nav-arrows">
+                            <a href="#">Next</a>
+                            <a href="#">Previous</a>
+                        </div>
+
+                    </div><!-- /wrapper -->
+                    <div class="footer-banner" style="width:728px; margin:30px auto"></div>
+                </div>
+                <div id='app' class="container-fluid">
+
+
+                    <div id="accordion">
+
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne"
+                                        aria-expanded="false" aria-controls="collapseTwo">
+                                        增加商品
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="container">
+
+
+                                        <H3></H3>
+                                        <form action="/api/v1/tea" method="POST">
+
+                                            <div class="form-group">
+                                                <label for="">名称</label>
+                                                <input class="form-control" v-model="name" placeholder="请输入产品的标题">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="">小杯价格</label>
+                                                <input class="form-control" v-model="price1" placeholder="请输入小杯价格">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="">中杯价格</label>
+                                                <input class="form-control" v-model="price2" placeholder="请输入中杯价格">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="">大杯价格</label>
+                                                <input class="form-control" v-model="price3" placeholder="请输入大杯价格">
+                                            </div>
+
+
+                                            <button v-on:click="add()" type="button" class="btn btn-primary btn-block">添加</button>
+                                            <!-- <button @click="check()" type="button" class="btn btn-primary btn-block">查看所有商品</button> -->
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button @click="check()" class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo"
+                                        aria-expanded="false" aria-controls="collapseOne">
+                                        查看所有商品
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="col-lg-12 col-sm-12">
+
+                                        <div class="jumbotron">
+                                            <!-- <h1 class="display-3 text-center mb-3" style="color:red">所有产品</h1> -->
+                                            <table class="table table-hover">
+                                                <thead class="thead-dark ">
+                                                    <tr>
+                                                        <th scope="col" class="text-center">商品名称</th>
+                                                        <th scope="col" class="text-center">小杯价格</th>
+                                                        <th scope="col" class="text-center">中杯价格</th>
+                                                        <th scope="col" class="text-center">大杯价格</th>
+                                                        <th scope="col" class="text-center">操作</th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody  v-for="p in ps" class="text-center">
+                                                    <tr>
+                                                        <th scope="row">{{p.name}}</th>
+                                                        <td>{{p.price1}}</td>
+                                                        <td>{{p.price2}}</td>
+                                                        <td>{{p.price3}}</td>
+                                                        <td>
+                                                            
+                                                            <button @click="edit(p.name)" type="button" class="btn btn-primary bt-outline">编辑</button>
+                                                            <button @click="finish(p.name)" type="button" class="btn btn-danger btn-outline">下架</button>
+                                                            
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- Button trigger modal -->
+
+
+                <!-- Modal -->
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                name: '',
+                price1: '',
+                price2: '',
+                price3: '',
+                ps: [],
+                // progress: 0,
+                p: '',
+                n: '12',
+
+
+            },
+            methods: {
+
+                edit: function() {
+
+                    this.n = 10;
+                },
+
+                finish(name1) {
+
+                    // item.finish = true;
+                    console.log(name1);
+                    // location. reload();
+
+                    axios.post('/api/v1/tea/list', {
+                            name: name1,
+
+                        })
+                        .then((response) => {
+                            console.log(response.data);
+
+                        })
+                        .catch((error) => {
+                            console.log('error');
+
+                        })
+
+
+
+                },
+
+
+
+                check: function () {
+                    // this.progress = 10;
+
+                    axios.get('/api/v1/tea/product')
+                        .then((response) => {
+                            console.log(response.data);
+
+                            this.ps = response.data;
+                        })
+                        .catch(() => {
+                            console.log('出错了')
+                        });
+                },
+
+
+
+                add: function () {
+                    // console.log(`${this.subject},${this.item1},${this.item2},${this.item3},${this.item4},${this.answer}`);
+                    //ajax
+                    axios.post('/api/v1/tea', {
+                            name: this.name,
+                            price1: this.price1,
+                            price2: this.price2,
+                            price3: this.price3
+
+                        })
+                        .then((response) => {
+                            console.log(response.data);
+
+                        })
+                        .catch((error) => {
+                            console.log('error');
+
+                        })
+                },
+            },
+
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript" src="http://cdn.staticfile.org/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.slicebox.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            var Page = (function () {
+
+                var $navArrows = $('#nav-arrows').hide(),
+                    $shadow = $('#shadow').hide(),
+                    slicebox = $('#sb-slider').slicebox({
+                        onReady: function () {
+
+                            $navArrows.show();
+                            $shadow.show();
+
+                        },
+                        orientation: 'r',
+                        cuboidsRandom: true,
+                        disperseFactor: 30
+                    }),
+
+                    init = function () {
+
+                        initEvents();
+
+                    },
+                    initEvents = function () {
+
+                        // add navigation events
+                        $navArrows.children(':first').on('click', function () {
+
+                            slicebox.next();
+                            return false;
+
+                        });
+
+                        $navArrows.children(':last').on('click', function () {
+
+                            slicebox.previous();
+                            return false;
+
+                        });
+
+                    };
+
+                return {
+                    init: init
+                };
+
+            })();
+
+            Page.init();
+
+        });
+    </script>
+    <script src="http://dreamsky.github.io/main/blog/common/init.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/sidebarEffects.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

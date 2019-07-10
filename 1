@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.irootech.service.mapper.SanydbReportConstructionDay">
+
+    <select id="getDeviceInfo" parameterType="java.util.Map" resultType="java.util.Map">
+        select distinct device_id as deviceId
+        from sanydb_report_corework_day t
+        where t.device_type_id = #{modelId}
+        and <![CDATA[ t.create_date <= #{countDate}]]>
+        <if test="oil != null and oil != ''">
+            and t.fuel_machine > 0
+        </if>
+        <if test="efficiency != null and efficiency != ''">
+            and t.work_time >0 and t.machine_time > 0
+        </if>
+    </select>
+
+    <select id="getDeviceList" parameterType="java.util.Map" resultType="java.util.Map">
+		select
+			model_id as modelId,
+			crm_model_name as modelName,
+			crm_BU_name as crmModeName,
+		from sanydb_model_constrast_new t
+	</select>
+
+    <select id="getDeviceExitYears" parameterType="java.util.Map" resultType="java.util.Map">
+		select
+            device_id as deviceId,
+            production_year as productionYear
+		from sanydb_base_device_exp t
+    </select>
+    
+    <insert id="insertReportCoreworkCount" parameterMap="java.util.Map" >
+         insert into user(model_id, model_name, crm_mode_name, count_date,
+         create_date,update_date,del_flag,device_oil_new_count,device_oil_sub_new_count,device_oil_old_count,
+         device_efficiency_new_count,device_efficiency_sub_new_count,device_efficiency_old_count,all_oil_count,all_efficiency_count)
+               values(#{modelId}, #{modelName}, #{crmModeName}, #{countDate}, #{createDate},
+               #{updateDate},#{delFlag},#{deviceOilNewCount},#{deviceOilSubNewCount},#{deviceOilOldCount},
+               #{deviceEfficiencyNewCount},#{deviceEfficiencySubNewCount},#{deviceEfficiencyOldCount},
+               #{allOilCount},#{allEfficiencyCount})
+    </insert>
+
+</mapper>
